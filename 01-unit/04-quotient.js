@@ -2,6 +2,7 @@
 // DEFINE FUNCTION(S)
 // ==================================================
 function quotient(num1, num2) {
+  if (num2 === undefined) num2 = 1;
   return num1 / num2;
 }
 
@@ -33,6 +34,8 @@ try {
   // Test Case 4
   // --------------------------------------------------
   // When invoked with only 1 number, it should return that number.
+  var result = quotient(2);
+  if (result !== 2) throw new Error('Expected quotient(2) to be 2. Received: ' + result);
 
   // --------------------------------------------------
   // Test Case 5
