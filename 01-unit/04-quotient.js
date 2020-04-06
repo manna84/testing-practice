@@ -4,6 +4,7 @@
 function quotient(num1, num2) {
   if (num1 === undefined) num1 = 0;
   if (num2 === undefined) num2 = 1;
+  if (num2 === 0) return 'Error';
   return num1 / num2;
 }
 
@@ -23,7 +24,7 @@ try {
   // --------------------------------------------------
   // It should return the text 'ERROR' when the second number is 0.
   var result = quotient(2, 0);
-  if (result !== result) throw new Error('ERROR');
+  if (result !== 'Error') throw new Error('Expected quotient(2, 0) to be Error. Received: ' + result);
 
   // --------------------------------------------------
   // Test Case 3
